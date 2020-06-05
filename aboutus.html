@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Ristorante Con Fusion: About Us</title>
+      <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Bootstrap CSS -->
+  <!--   <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css">
+    <link rel="stylesheet" href="/assets/fonts/fontawesome5-overrides.min.css?h=2c0fc24b3d3038317dc51c05339856d0">
+    <style>
+        .jumbotron 
+        {
+            background-color: brown;
+            color: white;
+            opacity: 0.95;
+            margin-top: 50px;
+            margin-bottom: 0;
+            padding: 60px 0px;
+        }
+        .row-header
+        {
+            padding: 0 20px;
+        }
+        .row-content
+        {
+            min-height: 300px;
+            padding: 50px 20px;
+        }
+        .navbar
+        {
+            padding: 10px;
+            background-color: brown;
+        }
+        .footer
+        {
+            padding: 40px 0 20px 0;
+        }
+        .tab-pane
+        {
+            border-bottom: 1px solid #ddd;
+            border-right: 1px solid #ddd;
+            border-left: 1px solid #ddd;
+            padding: 15px;
+            text-align: justify;
+        }
+        @media screen and (max-width: 576px)
+        {
+            #Navbar
+            {
+                text-align: center;
+            }
+            .navbar-nav span
+            {
+                display: none;
+                text-align: center;
+            }
+            .row-content
+            {
+                padding: 50px 0;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    
+    <nav class="navbar navbar-expand-sm navbar-dark fixed-top">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar"><span class="navbar-toggler-icon"></span></button>
+            <a href="./index.html" class="navbar-brand"><img src="img/logo.png" width="40" height="30"></a>
+            <div class="collapse navbar-collapse" id="Navbar">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"><a href="./index.html" class="nav-link "><span class="fa fa-home fa-lg"></span> Home</a></li>
+                    <li class="nav-item"><a href="./aboutus.html" class="nav-link active"><span class="fa fa-info fa-lg px-1 px-sm-0"></span> About</a></li>
+                    <li class="nav-item"><a href="./menu.html" class="nav-link "><span class="fa fa-list fa-lg"></span> Menu</a></li>
+                    <li class="nav-item"><a href="./contactus.html" class="nav-link"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
+                </ul>
+                <span class="navbar-text" style="cursor: pointer;" title="login">
+                <a class="loginbutton"> <i  class="fa fa-sign-in fa-lg"></i> Login </a>
+            </span>
+
+            </div>
+        </div>
+    </nav>
+
+
+    <!--  Log in modal -->
+    <div id="loginmodal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-md" role="content">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Login</h4>
+                    <button type="button" class="close" data-dismiss="modal">
+                        &times;
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        
+                        <div class="row">
+                            <div class="form-group col-sm">
+                                <input type="email" class="form-control" placeholder="Enter email" name="email">
+                            </div>
+                            <div class="form-group col-sm">
+                                <input type="password" class="form-control" name="password" placeholder="Password">
+                            </div>
+                            <div class="col-sm">
+                                <div class="form-check">
+                                    <label><input type="checkbox" class="form-check-input"><strong>Remember Me</strong> </label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <button class="btn btn-secondary ml-auto" data-dismiss="modal" type="button">Cancel</button>
+                            <button class="btn btn-primary ml-1" type="Submit">Sign in</button>
+                        </div>
+                    </form>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end login modal -->
+
+    
+<!-- Reserve Table Modal   -->
+    <div id="reservemodal" class="modal fade">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Reserve a Table</h2>
+                    <button type="button" class="close" data-dismiss="modal">
+                        &times;
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label"><strong>Number Of Guests</strong></label>
+                            <div class="col-sm align-self-center">
+                                <div class="form-check form-check-inline">
+                                    <label class="form-check-label"><input type="radio" class="form-check-input" name="number-of-guest"><b>1</b></label>
+                                </div>
+                                 <div class="form-check form-check-inline">
+                                    <label class="form-check-label"><input type="radio" class="form-check-input" name="number-of-guest"><b>2</b></label>
+                                </div>
+                                 <div class="form-check form-check-inline">
+                                    <label class="form-check-label"><input type="radio" class="form-check-input" name="number-of-guest"><b>3</b></label>
+                                </div>
+                                 <div class="form-check form-check-inline">
+                                    <label class="form-check-label"><input type="radio" class="form-check-input" name="number-of-guest"><b>4</b></label>
+                                </div>
+                                 <div class="form-check form-check-inline">
+                                    <label class="form-check-label"><input type="radio" class="form-check-input" name="number-of-guest"><b>5</b></label>
+                                </div>
+                                 <div class="form-check form-check-inline">
+                                    <label class="form-check-label"><input type="radio" class="form-check-input" name="number-of-guest"><b>6</b></label>
+                                </div>                               
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label"><strong>Section</strong></label>
+                            <div class="col-sm">
+                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                    <label class="btn btn-success active">
+                                        <input type="radio" class="form-check-input" name="section">
+                                        Non-Smoking
+                                    </label>
+                                    <label class="btn btn-danger">
+                                        <input class="form-check-input" type="radio" name="Section">
+                                        Smoking
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label" for="date"><strong>Date and Time</strong></label>
+                            <div class="col-sm-4 align-self-center">
+                                <input type="text" placeholder="Date" id="date" class="form-control">
+                            </div>
+                            <div class="col-sm-4 align-self-center">
+                                <input type="text" placeholder="Time" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm offset-sm-2">
+                                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                                <button class="btn btn-primary" type="submit">Reserve</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End reserve model -->
+
+    <header class="jumbotron">
+        <div class="container">
+            <div class="row row-header">
+                <div class="col-12 col-sm-6">
+                    <h1>Ristorante con Fusion</h1>
+                    <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!</p>
+                </div>
+                <div class="col-12 col-sm text-center">
+                    <img src="img/logo.png">
+                </div>
+                <div class="col-12 col-sm align-self-center mt-3 mt-sm-0">
+                    <button type="button" class="btn btn-warning btn-block btn-lg reservebutton"><strong>Reserve Table</strong></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="row mt-0">
+            <div class="col-12">
+               <h3>About Us</h3>
+               <hr>
+            </div>
+        </div>
+
+        <div class="row row-content">
+            <div class="col-sm-6 col-12">
+                <h2>Our History</h2>
+                <p class="text-justify">Started in 2010, Ristorante con Fusion quickly established itself as a culinary icon par excellence in Hong Kong. With its unique brand of world fusion cuisine that can be found nowhere else, it enjoys patronage from the A-list clientele in Hong Kong.  Featuring four of the best three-star Michelin chefs in the world, you never know what will arrive on your plate the next time you visit us.</p>
+                <p>The restaurant traces its humble beginnings to <em>The Frying Pan</em>, a successful chain started by our CEO, Mr. Peter Pan, that featured for the first time the world's best cuisines in a pan.</p>
+            </div>
+            <div class="col-sm">
+                <div class="card">
+                    <h2 class="card-header bg-primary text-white"> Facts At a Glance</h2>
+                    <div class="card-body">
+                        <dl class="row">
+                            <dt class="col-6"> Started</dt>
+                            <dd class="col-6"> 3 Feb. 2013 </dd>
+                            <dt class="col-6"> Major Stake Holder </dt>
+                            <dd class="col-6"> HK Fine Foods Inc.</dd>
+                            <dt class="col-6"> Last Year Turnover </dt>
+                            <dd class="col-6"> $100,000 </dd>
+                            <dt class="col-6"> Employees </dt>
+                            <dd class="col-6"> 40 </dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 mt-2 mt-sm-0">
+                <div class="card card-body bg-light">
+                    <blockquote class="blockquote">
+                        <p> You better cut pizza in four pieces because i'm not hungry enough to eat six. </p>
+                        <footer class="blockquote-footer">
+                            <cite title="Source Title">
+                                    Yogi Berra, The Wit and Wisdom of Yogi Berra, P. Pepe, Diversion Books, 2014
+                            </cite>
+                        </footer>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">             
+                <div class="col-4 offset-1 col-sm-2">
+                    <h5>Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="./menu.html">Menu</a></li>
+                        <li><a href="./contactus.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-7 col-sm-5">
+                    <h5>Our Address</h5>
+                    <address>
+		              121, Clear Water Bay Road<br>
+		              Clear Water Bay, Kowloon<br>
+		              HONG KONG<br>
+		              Tel.: +852 1234 5678<br>
+		              Fax: +852 8765 4321<br>
+		              Email: <a href="mailto:confusion@food.net">confusion@food.net</a>
+		           </address>
+                </div>
+                <div class="col-12 col-sm-4 align-self-center">
+                    <div class="text-center">
+                        <a href="http://google.com/+" class="btn btn-social-icon btn-google"><i class="fa fa-google-plus fa-lg"></i></a>
+                        <a href="http://www.facebook.com/profile.php?id=" class="btn btn-social-icon btn-facebook"><i class="fa fa-facebook fa-lg"></i></a>
+                        <a href="http://www.linkedin.com/in/" class="btn btn-social-icon btn-linkedin"><i class="fa fa-linkedin fa-lg"></i></a>
+                        <a href="http://twitter.com/" class="btn btn-social-icon btn-twitter"><i class="fa fa-twitter fa-lg"></i></a>
+                        <a href="http://youtube.com/" class="btn btn-social-icon btn-danger"><i class="fa fa-youtube fa-lg"></i></a>
+                        <a href="mailto:"><i class="fa fa-envelope fa-lg"></i></a>
+                    </div>
+                </div>
+           </div>
+           <div class="row justify-content-center">             
+                <div class="col-auto">
+                    <p>© Copyright 2018 Ristorante Con Fusion</p>
+                </div>
+           </div>
+        </div>
+    </footer>
+      <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
+ <!--    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script> -->
+       <!-- JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function() {
+            $(".loginbutton").click(function() {
+                $("#loginmodal").modal(`show`);
+            });
+            $(".reservebutton").click(function() {
+                $("#reservemodal").modal(`show`);
+            });
+        });
+    </script>
+</body>
+
+</html>
